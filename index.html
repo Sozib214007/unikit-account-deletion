@@ -4,10 +4,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6655e8">
+<meta name="theme-color" content="#102747">
+
 <title>Account Deletion | UniKit</title>
 
 <style>
+:root {
+    --navy: #102747;
+    --navy-light: #183b63;
+    --blue: #2563eb;
+    --cyan: #38bdf8;
+    --bg: #f2f6fc;
+    --white: #ffffff;
+    --text: #172b45;
+    --muted: #52647a;
+    --border: #e1e9f2;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,218 +28,405 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Roboto, Arial, sans-serif;
-    background: #f5f6ff;
-    color: #25243a;
-    line-height: 1.7;
+    font-family: Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
 }
 
+/* HERO */
+
 .hero {
-    background: linear-gradient(135deg, #5145cd, #8170f5);
+    background:
+    radial-gradient(circle at 85% 15%, #38bdf833, transparent 30%),
+    linear-gradient(135deg, #102747, #174b7c 65%, #176c9b);
     color: white;
-    padding: 55px 20px 85px;
     text-align: center;
+    padding: 65px 20px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ffffff18;
+    border-radius: 50%;
+    top: -220px;
+    right: -100px;
 }
 
 .logo {
-    width: 68px;
-    height: 68px;
-    border-radius: 20px;
-    background: white;
-    color: #6555df;
-    display: inline-flex;
-    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 23px;
+    background: linear-gradient(145deg, #ffffff, #dceeff);
+    color: #1556a0;
+    display: flex;
     align-items: center;
-    font-size: 29px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    box-shadow: 0 8px 25px #30249b55;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 900;
+    margin: 0 auto 18px;
+    box-shadow: 0 10px 30px #071b3580;
 }
 
 .hero h1 {
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
 }
 
 .hero p {
-    opacity: .9;
+    color: #d7eaff;
     font-size: 15px;
 }
 
+/* MAIN */
+
 .container {
-    max-width: 760px;
-    margin: -40px auto 40px;
-    padding: 0 18px;
+    max-width: 780px;
+    margin: -48px auto 45px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
+
+/* CARDS */
 
 .card {
-    background: white;
+    background: var(--white);
     padding: 30px;
-    border-radius: 20px;
-    margin-bottom: 18px;
-    box-shadow: 0 8px 30px rgba(50, 45, 120, .07);
+    border-radius: 18px;
+    margin-bottom: 19px;
+    border: 1px solid var(--border);
+    box-shadow: 0 7px 25px rgba(20, 48, 85, 0.055);
+    transition: transform .2s, box-shadow .2s;
 }
 
-h2 {
-    font-size: 19px;
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(20, 48, 85, 0.09);
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 750;
+    color: var(--navy);
     margin-bottom: 13px;
-    color: #5145cd;
+    display: flex;
+    align-items: center;
+    gap: 11px;
 }
 
-p {
-    font-size: 14px;
-    color: #626176;
+.card h2::before {
+    content: "";
+    width: 5px;
+    height: 23px;
+    background: linear-gradient(var(--blue), var(--cyan));
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.card p {
+    font-size: 14.5px;
+    color: var(--muted);
     margin-bottom: 12px;
 }
 
+.card p:last-child {
+    margin-bottom: 0;
+}
+
 ul, ol {
-    padding-left: 22px;
-    color: #626176;
-    font-size: 14px;
+    padding-left: 23px;
+    color: var(--muted);
+    font-size: 14.5px;
 }
 
 li {
-    margin-bottom: 9px;
+    padding-left: 5px;
+    margin-bottom: 10px;
 }
 
+li::marker {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+b {
+    color: var(--navy);
+}
+
+/* EMAIL BOX */
+
 .email-box {
-    background: #f0efff;
-    border: 1px solid #dedaff;
-    border-radius: 14px;
-    padding: 18px;
-    margin-top: 15px;
+    background: #eff6ff;
+    border: 1px solid #cfe2ff;
+    border-radius: 15px;
+    padding: 23px 15px;
+    margin-top: 22px;
     text-align: center;
+}
+
+.email-box p {
+    color: #29486d;
+    font-weight: 600;
 }
 
 .email {
     display: inline-block;
-    background: #6555df;
+    background: linear-gradient(135deg, #2563eb, #1679bd);
     color: white;
     text-decoration: none;
-    padding: 12px 22px;
+    padding: 13px 25px;
     border-radius: 10px;
-    font-weight: 600;
-    margin-top: 10px;
+    font-weight: 700;
+    margin-top: 7px;
     font-size: 14px;
+    box-shadow: 0 5px 15px #2563eb35;
+    transition: .2s;
 }
 
 .email:hover {
-    background: #5145cd;
+    background: #174db7;
+    transform: translateY(-2px);
 }
 
+/* IMPORTANT NOTE */
+
 .note {
-    background: #fff8e8;
-    border-left: 4px solid #e9ae40;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #755c2c;
+    background: #fff9eb;
+    border: 1px solid #f4dfad;
+    border-left: 5px solid #e5a52e;
+    padding: 19px 21px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    color: #624a1e;
 }
+
+.note b {
+    color: #805710;
+}
+
+/* FOOTER */
 
 footer {
     text-align: center;
-    padding: 20px;
-    color: #88869c;
-    font-size: 12px;
+    padding: 30px 15px;
+    color: #65758a;
+    font-size: 13px;
+    border-top: 1px solid #e0e8f2;
+    background: #ffffff;
 }
 
-@media(max-width: 500px) {
-    .hero h1 { font-size: 26px; }
-    .card { padding: 23px 19px; }
+footer strong {
+    color: var(--navy);
 }
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 18px 85px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .logo {
+        width: 68px;
+        height: 68px;
+        font-size: 31px;
+    }
+
+    .container {
+        padding: 0 14px;
+    }
+
+    .card {
+        padding: 23px 19px;
+        border-radius: 15px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p, ul, ol {
+        font-size: 14px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header class="hero">
+
     <div class="logo">U</div>
+
     <h1>UniKit</h1>
-    <p>Account & Data Deletion</p>
+
+    <p>Account &amp; Data Deletion Center</p>
+
 </header>
 
 <main class="container">
 
     <section class="card">
+
         <h2>Account Deletion Request</h2>
+
         <p>
-            We respect your privacy and your right to control
-            your personal information. If you no longer wish
-            to use UniKit, you can request permanent deletion
-            of your account and associated data.
+            Your privacy matters to us. UniKit gives you control
+            over your personal information. If you no longer
+            wish to use UniKit, you can request the permanent
+            deletion of your account and associated personal data.
         </p>
+
     </section>
 
+
     <section class="card">
+
         <h2>How to Delete Your Account</h2>
-        <p>To request account deletion, follow these steps:</p>
+
+        <p>
+            To request deletion of your UniKit account,
+            please follow these simple steps:
+        </p>
+
         <ol>
-            <li>Send an email to our support address.</li>
-            <li>Use the subject: <b>UniKit Account Deletion Request</b>.</li>
-            <li>Include the email address linked to your UniKit account.</li>
-            <li>We may contact you to verify account ownership.</li>
-            <li>After verification, we will process your deletion request.</li>
+            <li>Send an email to our official support address.</li>
+
+            <li>
+                Use the subject:
+                <b>UniKit Account Deletion Request</b>.
+            </li>
+
+            <li>
+                Include the email address associated with
+                your UniKit account.
+            </li>
+
+            <li>
+                We may contact you to verify ownership
+                of the account.
+            </li>
+
+            <li>
+                After verification, we will process your
+                account deletion request.
+            </li>
         </ol>
 
         <div class="email-box">
-            <p>Send your deletion request here:</p>
+
+            <p>Ready to request account deletion?</p>
+
             <a class="email"
-               href="mailto:mdsozib789@gmail.com?subject=UniKit%20Account%20Deletion%20Request">
-               Request Account Deletion
+            href="mailto:mdsozib789@gmail.com?subject=UniKit%20Account%20Deletion%20Request">
+
+                Request Account Deletion
+
             </a>
+
         </div>
+
     </section>
 
+
     <section class="card">
+
         <h2>What Data Will Be Deleted?</h2>
-        <p>Once your request is approved, we will delete the following data associated with your account, where stored:</p>
+
+        <p>
+            After your deletion request is approved,
+            the following data associated with your account
+            will be deleted, where collected or stored:
+        </p>
+
         <ul>
+
             <li>Account information, including name and email address.</li>
+
             <li>Saved academic information associated with your account.</li>
+
             <li>Tasks, class routines and other account-linked data.</li>
+
             <li>Other personal information stored by UniKit.</li>
+
         </ul>
+
     </section>
 
+
     <section class="card">
-        <h2>Data Retention</h2>
+
+        <h2>Data Retention Policy</h2>
+
         <p>
             Account-associated personal data will be deleted
             within 30 days after your request has been verified
             and approved.
         </p>
+
         <p>
             We do not retain deleted personal data unless
             retention is required by applicable law.
             Any legally required data will be retained only
-            for the required period.
+            for the period required by law.
         </p>
+
     </section>
+
 
     <section class="card">
+
         <h2>Need Help?</h2>
+
         <p>
-            If you have questions about account deletion,
-            privacy or your personal data, feel free to contact us.
+            Have questions about your account, personal data
+            or the deletion process? Contact our support team.
         </p>
+
         <p><b>App:</b> UniKit: Student Toolkit</p>
+
         <p><b>Developer:</b> UniKit</p>
-        <p><b>Email:</b> mdsozib789@gmail.com</p>
+
+        <p><b>Support Email:</b> mdsozib789@gmail.com</p>
+
     </section>
 
+
     <div class="note">
-        <b>Important:</b> Account deletion is permanent.
-        Once completed, your account and associated data
-        cannot be recovered.
+
+        <b>Important Notice:</b>
+
+        Account deletion is permanent. Once the deletion
+        process is completed, your account and associated
+        data cannot be recovered.
+
     </div>
 
 </main>
 
+
 <footer>
+
+    <strong>UniKit</strong> — Made for students, with care.
+
+    <br><br>
+
     © 2026 UniKit. All rights reserved.
-    <br>
-    Made for students, with care.
+
 </footer>
 
 </body>
