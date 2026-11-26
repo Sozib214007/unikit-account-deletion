@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#102747">
 
-<title>Account Deletion | UniKit</title>
+<title>Account & Data Deletion | UniKit</title>
+<meta name="description" content="Request deletion of your UniKit account and associated personal data.">
 
 <style>
 :root {
@@ -34,8 +35,6 @@ body {
     color: var(--text);
     line-height: 1.75;
 }
-
-/* HERO */
 
 .hero {
     background:
@@ -86,8 +85,6 @@ body {
     font-size: 15px;
 }
 
-/* MAIN */
-
 .container {
     max-width: 780px;
     margin: -48px auto 45px;
@@ -95,8 +92,6 @@ body {
     position: relative;
     z-index: 2;
 }
-
-/* CARDS */
 
 .card {
     background: var(--white);
@@ -162,8 +157,6 @@ b {
     color: var(--navy);
 }
 
-/* EMAIL BOX */
-
 .email-box {
     background: #eff6ff;
     border: 1px solid #cfe2ff;
@@ -197,8 +190,6 @@ b {
     transform: translateY(-2px);
 }
 
-/* IMPORTANT NOTE */
-
 .note {
     background: #fff9eb;
     border: 1px solid #f4dfad;
@@ -207,13 +198,12 @@ b {
     border-radius: 12px;
     font-size: 13.5px;
     color: #624a1e;
+    margin-bottom: 18px;
 }
 
 .note b {
     color: #805710;
 }
-
-/* FOOTER */
 
 footer {
     text-align: center;
@@ -227,8 +217,6 @@ footer {
 footer strong {
     color: var(--navy);
 }
-
-/* MOBILE */
 
 @media (max-width: 600px) {
     .hero {
@@ -262,49 +250,47 @@ footer strong {
         font-size: 14px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
 <header class="hero">
-
     <div class="logo">U</div>
-
     <h1>UniKit</h1>
-
     <p>Account &amp; Data Deletion Center</p>
-
 </header>
 
 <main class="container">
 
     <section class="card">
-
         <h2>Account Deletion Request</h2>
 
         <p>
-            Your privacy matters to us. UniKit gives you control
-            over your personal information. If you no longer
-            wish to use UniKit, you can request the permanent
-            deletion of your account and associated personal data.
+            Your privacy matters to us. UniKit allows registered
+            users to request permanent deletion of their UniKit
+            account and associated personal information.
         </p>
 
+        <p>
+            If you no longer wish to use UniKit, you can submit
+            an account deletion request by following the steps
+            described on this page.
+        </p>
     </section>
 
-
     <section class="card">
-
-        <h2>How to Delete Your Account</h2>
+        <h2>How to Request Account Deletion</h2>
 
         <p>
-            To request deletion of your UniKit account,
-            please follow these simple steps:
+            You do not need to access the app to submit a deletion
+            request. You can request deletion directly by email.
         </p>
 
         <ol>
-            <li>Send an email to our official support address.</li>
+            <li>
+                Send an email to our official support address.
+            </li>
 
             <li>
                 Use the subject:
@@ -317,116 +303,168 @@ footer strong {
             </li>
 
             <li>
-                We may contact you to verify ownership
-                of the account.
+                We may contact you to verify that you own
+                the account before processing the request.
             </li>
 
             <li>
-                After verification, we will process your
-                account deletion request.
+                Once verified, we will process your account
+                and associated data deletion request.
             </li>
         </ol>
 
         <div class="email-box">
-
             <p>Ready to request account deletion?</p>
 
             <a class="email"
-            href="mailto:mdsozib789@gmail.com?subject=UniKit%20Account%20Deletion%20Request">
-
+               href="mailto:nextgenxstudio@gmail.com?subject=UniKit%20Account%20Deletion%20Request">
                 Request Account Deletion
-
             </a>
-
         </div>
-
     </section>
 
-
     <section class="card">
-
         <h2>What Data Will Be Deleted?</h2>
 
         <p>
-            After your deletion request is approved,
-            the following data associated with your account
-            will be deleted, where collected or stored:
+            After your request has been verified and approved,
+            we will delete personal information associated with
+            your UniKit account, where applicable, including:
         </p>
 
         <ul>
+            <li>
+                Account profile information, such as your name
+                and account email address.
+            </li>
 
-            <li>Account information, including name and email address.</li>
+            <li>
+                DUET email verification information associated
+                with your account.
+            </li>
 
-            <li>Saved academic information associated with your account.</li>
+            <li>
+                Account-linked information stored in our
+                Firebase and Firestore services.
+            </li>
 
-            <li>Tasks, class routines and other account-linked data.</li>
+            <li>
+                Account-associated club, academic calendar,
+                prayer-time or other submitted requests.
+            </li>
 
-            <li>Other personal information stored by UniKit.</li>
+            <li>
+                Account-associated notification records and
+                registered push notification tokens.
+            </li>
 
+            <li>
+                Uploaded files and images associated with your
+                account that are stored in UniKit's Supabase
+                storage services.
+            </li>
+
+            <li>
+                Other personal information associated with
+                your UniKit account.
+            </li>
         </ul>
 
+        <p>
+            Data that is not associated with your account,
+            such as information stored only on your device,
+            may need to be removed separately by clearing
+            the app's storage or uninstalling the app.
+        </p>
     </section>
 
-
     <section class="card">
-
-        <h2>Data Retention Policy</h2>
+        <h2>Data That May Not Be Deleted</h2>
 
         <p>
-            Account-associated personal data will be deleted
-            within 30 days after your request has been verified
-            and approved.
+            Account deletion does not delete your Google account.
+            It only applies to your UniKit account and the
+            associated data controlled by UniKit.
         </p>
 
         <p>
-            We do not retain deleted personal data unless
-            retention is required by applicable law.
-            Any legally required data will be retained only
-            for the period required by law.
+            Some information may need to be retained for a
+            limited period where required by applicable law
+            or where necessary for legitimate security,
+            fraud-prevention or legal purposes.
         </p>
 
+        <p>
+            Advertising-related information collected and
+            processed independently by third-party services
+            such as Google AdMob is subject to the relevant
+            third party's privacy and data policies.
+        </p>
     </section>
 
+    <section class="card">
+        <h2>Data Retention and Processing Time</h2>
+
+        <p>
+            Verified account deletion requests will be processed
+            within 30 days after verification and approval.
+        </p>
+
+        <p>
+            Where limited retention is legally necessary,
+            the relevant information will be retained only
+            for the period required for that purpose.
+        </p>
+
+        <p>
+            Once the deletion process is completed, the
+            deleted account and associated data cannot
+            normally be recovered.
+        </p>
+    </section>
 
     <section class="card">
+        <h2>Guest Users</h2>
 
+        <p>
+            Guest users do not have a registered UniKit account.
+            Guest-session information may be stored locally
+            on the device.
+        </p>
+
+        <p>
+            Guest users can clear local app data or uninstall
+            UniKit to remove locally stored guest-session data.
+        </p>
+    </section>
+
+    <section class="card">
         <h2>Need Help?</h2>
 
         <p>
-            Have questions about your account, personal data
-            or the deletion process? Contact our support team.
+            If you have questions about your account, personal
+            information or the deletion process, contact us.
         </p>
 
         <p><b>App:</b> UniKit: Student Toolkit</p>
-
         <p><b>Developer:</b> NextGenX Studio</p>
-
-        <p><b>Support Email:</b> mdsozib789@gmail.com</p>
-
+        <p><b>Support Email:</b> nextgenxstudio@gmail.com</p>
     </section>
 
-
     <div class="note">
-
         <b>Important Notice:</b>
-
-        Account deletion is permanent. Once the deletion
-        process is completed, your account and associated
-        data cannot be recovered.
-
+        Account deletion is permanent. After the deletion
+        process is completed, your UniKit account and
+        deleted associated data cannot be recovered.
+        This request does not delete your Google account.
     </div>
 
 </main>
 
-
 <footer>
-
     <strong>UniKit</strong> — Made for students, with care.
-
     <br><br>
-
     © 2026 UniKit. All rights reserved.
-
 </footer>
 
 </body>
